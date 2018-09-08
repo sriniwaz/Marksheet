@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table</title>
+	<style>
+		tr {
+			background-color: gray;
+		} 
+		table th,td {
+			border:1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<h1>SSC mark</h1>
+	
+	<table>
+		<tr>
+			<th>S.No</th>
+			<th>subject</th>
+			<th>mark</th>
+			<th>grade</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Tamil</td>
+			<td><input type="text" placeholder="enter Tamil marks" id="tamil">
+				</td>
+			<td> <span id="displaytamilGrade"></span> </td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>english</td>
+			<td><input type="text" placeholder="enter english marks" id="eng">
+				</td>
+			<td> <span id="displayengGrade"></span> </td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>maths</td>
+			<td><input type="text" placeholder="enter Maths marks" id="math">
+			</td>
+			<td> <span id="displayMathGrade"></span> </td>
+			
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>science</td>
+			<td><input type="text" placeholder="enter science marks" id="sci">
+				</td>
+			<td> <span id="displaysciGrade"></span> </td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>social</td>
+			<td><input type="text" placeholder="enter social marks" id="social">
+				</td>
+			<td> <span id="displaysocialGrade"></span> </td>
+			
+		</tr>
+		<tr>
+			<td></td>
+			<td>total</td>
+			<td><span id="totalValue"></span></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>total average</td>
+			<td><span id="totalavgvalue"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>grade average</td>
+			<td><span id="gradeavg"></td>
+			<td></td>
+		</tr>
+
+	</table>
+
+
+		<input type="submit" value="Submit" onclick="getallresult()">
+		
+
+
+
+		<script>
+		var gradeS = 'S';
+		var gradeA = 'A';
+		var gradeB = 'B';
+		var gradeC = 'C';
+		var gradeD = 'D';
+		var gradeE = 'E';
+		var gradeU = 'U';
+
+
+		function getallresult() 
+		{
+			var tamilValue = document.getElementById('tamil').value;
+
+
+			if(tamilValue>90) 
+			{
+				document.getElementById('displaytamilGrade').innerHTML = gradeS;
+			} 
+
+			else if(tamilValue>80 && tamilValue <= 90) 
+			{
+				document.getElementById('displaytamilGrade').innerHTML = gradeA;
+			} 
+
+			else if(tamilValue>70 && tamilValue <= 80) 
+			{
+				document.getElementById('displaytamilGrade').innerHTML = gradeB;
+			} 
+
+			else if(tamilValue>60 && tamilValue <= 70) 
+			{
+				document.getElementById('displaytamilGrade').innerHTML = gradeC;
+			} 
+
+			else if(tamilValue>50 && tamilValue <= 60) 
+			{
+				document.getElementById('displaytamilGrade').innerHTML = gradeD;
+			} 
+
+			else if(tamilValue>=40 && tamilValue <= 50) 
+			{
+				document.getElementById('displaytamilGrade').innerHTML = gradeE;
+			} 
+
+			else if(tamilValue < 40) 
+			{
+				document.getElementById('displaytamilGrade').innerHTML = gradeU;
+			}
+
+
+
+			var engValue = document.getElementById('eng').value;
+
+
+			if(engValue>90) 
+			{
+				document.getElementById('displayengGrade').innerHTML = gradeS;
+			} 
+
+			else if(engValue>80 && engValue <= 90) 
+			{
+				document.getElementById('displayengGrade').innerHTML = gradeA;
+			} 
+
+			else if(engValue>70 && engValue <= 80) 
+			{
+				document.getElementById('displayengGrade').innerHTML = gradeB;
+			} 
+
+			else if(engValue>60 && engValue <= 70) 
+			{
+				document.getElementById('displayengGrade').innerHTML = gradeC;
+			} 
+
+			else if(engValue>50 && engValue <= 60) 
+			{
+				document.getElementById('displayengGrade').innerHTML = gradeD;
+			} 
+
+			else if(engValue>=40 && engValue <= 50) 
+			{
+				document.getElementById('displayengGrade').innerHTML = gradeE;
+			} 
+
+			else if(engValue < 40) 
+			{
+				document.getElementById('displayengGrade').innerHTML = gradeU;
+			}
+
+			var mathValue = document.getElementById('math').value;
+
+
+			if(mathValue>90) 
+			{
+				document.getElementById('displayMathGrade').innerHTML = gradeS;
+			} 
+
+			else if(mathValue>80 && mathValue <= 90) 
+			{
+				document.getElementById('displayMathGrade').innerHTML = gradeA;
+			} 
+
+			else if(mathValue>70 && mathValue <= 80) 
+			{
+				document.getElementById('displayMathGrade').innerHTML = gradeB;
+			} 
+
+			else if(mathValue>60 && mathValue <= 70) 
+			{
+				document.getElementById('displayMathGrade').innerHTML = gradeC;
+			} 
+
+			else if(mathValue>50 && mathValue <= 60) 
+			{
+				document.getElementById('displayMathGrade').innerHTML = gradeD;
+			} 
+
+			else if(mathValue>=40 && mathValue <= 50) 
+			{
+				document.getElementById('displayMathGrade').innerHTML = gradeE;
+			} 
+
+			else if(mathValue < 40) 
+			{
+				document.getElementById('displayMathGrade').innerHTML = gradeU;
+			}
+
+			var sciValue = document.getElementById('sci').value;
+
+
+			if(sciValue>90) 
+			{
+				document.getElementById('displaysciGrade').innerHTML = gradeS;
+			} 
+
+			else if(sciValue>80 && sciValue <= 90) 
+			{
+				document.getElementById('displaysciGrade').innerHTML = gradeA;
+			} 
+
+			else if(sciValue>70 && sciValue <= 80) 
+			{
+				document.getElementById('displaysciGrade').innerHTML = gradeB;
+			} 
+
+			else if(sciValue>60 && sciValue <= 70) 
+			{
+				document.getElementById('displaysciGrade').innerHTML = gradeC;
+			} 
+
+			else if(sciValue>50 && sciValue <= 60) 
+			{
+				document.getElementById('displaysciGrade').innerHTML = gradeD;
+			} 
+
+			else if(sciValue>=40 && sciValue <= 50) 
+			{
+				document.getElementById('displaysciGrade').innerHTML = gradeE;
+			} 
+
+			else if(sciValue < 40) 
+			{
+				document.getElementById('displaysciGrade').innerHTML = gradeU;
+			}
+
+
+			var socialValue = document.getElementById('social').value;
+
+
+			if(socialValue>90) 
+			{
+				document.getElementById('displaysocialGrade').innerHTML = gradeS;
+			} 
+
+			else if(socialValue>80 && socialValue <= 90) 
+			{
+				document.getElementById('displaysocialGrade').innerHTML = gradeA;
+			} 
+
+			else if(socialValue>70 && socialValue <= 80) 
+			{
+				document.getElementById('displaysocialGrade').innerHTML = gradeB;
+			} 
+
+			else if(socialValue>60 && socialValue <= 70) 
+			{
+				document.getElementById('displaysocialGrade').innerHTML = gradeC;
+			} 
+
+			else if(socialValue>50 && socialValue <= 60) 
+			{
+				document.getElementById('displaysocialGrade').innerHTML = gradeD;
+			} 
+
+			else if(socialValue>=40 && socialValue <= 50) 
+			{
+				document.getElementById('displaysocialGrade').innerHTML = gradeE;
+			} 
+
+			else if(socialValue < 40) 
+			{
+				document.getElementById('displaysocialGrade').innerHTML = gradeU;
+			}
+
+			//avg
+			var total= parseInt(tamilValue)+ parseInt(engValue)+ parseInt(mathValue)+ parseInt(sciValue)+ parseInt(socialValue);
+			document.getElementById('totalValue').innerHTML =total;
+
+			var totalavg= total/5;
+			document.getElementById('totalavgvalue').innerHTML =totalavg;
+
+
+
+
+
+			var gradeavgValue = document.getElementById('gradeavg').value;
+
+
+			if(totalavg>90) 
+			{
+				document.getElementById('gradeavg').innerHTML = gradeS;
+			} 
+
+			else if(totalavg>80 && totalavg <= 90) 
+			{
+				document.getElementById('gradeavg').innerHTML = gradeA;
+			} 
+
+			else if(totalavg>70 && totalavg <= 80) 
+			{
+				document.getElementById('gradeavg').innerHTML = gradeB;
+			} 
+
+			else if(totalavg>60 && totalavg <= 70) 
+			{
+				document.getElementById('gradeavg').innerHTML = gradeC;
+			} 
+
+			else if(totalavg>50 && totalavg <= 60) 
+			{
+				document.getElementById('gradeavg').innerHTML = gradeD;
+			} 
+
+			else if(totalavg>=40 && totalavg <= 50) {
+				document.getElementById('gradeavg').innerHTML = gradeE;
+			} 
+
+			else if(totalavg < 40) {
+				document.getElementById('gradeavg').innerHTML = gradeU;
+			}
+
+
+
+
+
+		}
+
+
+
+		
+
+
+		
+
+	</script>
+
+
+
+	</table>
+</body>
+</html>
